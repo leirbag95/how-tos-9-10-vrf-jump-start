@@ -1,6 +1,6 @@
 # How To #10 on Gelato: VRF Jump Start
 
-This repository provides example contracts and instructions for setting up Verifiable Random Function (VRF) on Gelato, utilizing both Gelato VRF and Gelato VRF (Chainlink Compatible).
+This repository provides example contracts and instructions for setting up Verifiable Random Function (VRF) on Gelato, utilizing Gelato VRF.
 
 [![Video Walkthrough](https://img.youtube.com/vi/cUPjQYoH2OE/0.jpg)](https://youtu.be/cUPjQYoH2OE)
 
@@ -17,7 +17,6 @@ This repository includes contracts and configurations necessary for implementing
 There are two types of VRF contracts available in this repository:
 
 1. Gelato VRF
-2. Gelato VRF (Chainlink Compatible)
 
 > [!NOTE]  
 > Check the deployed addresses for each network in the deployments folder.
@@ -29,24 +28,9 @@ There are two types of VRF contracts available in this repository:
   - Requests randomness from Gelato VRF.
   - Handles the fulfillment of randomness.
 
-## Gelato VRF (Chainlink Compatible): `SimpleVRFChainlinkCompatible`
-
-- **Description**: Contract for using Gelato VRF with Chainlink VRF.
-- **Features**:
-  - Requests randomness from Gelato VRF.
-  - Handles the fulfillment of randomness.
-  - Converts Chainlink VRF response to Gelato VRF response.
-
-> [!IMPORTANT]  
-> Make sure that the `vrfCoordinator` address can be set after the contract has been deployed. This can be done by making the vrfCoordinator non-immutable as follows:
-> `address public vrfCoordinator;`
-> Ensure you've configured the deployed adapter from the task as the `vrfCoordinator`.
-
 # Create a Gelato VRF Task
 
 To create a Gelato VRF Task, please refer to the documentation [here](https://docs.gelato.network/web3-services/vrf/quick-start/deploying-your-vrf-instance).
-
-To create a Gelato VRF Task with Chainlink compatibility, please refer to the documentation [here](https://docs.gelato.network/web3-services/vrf/migrating-from-chainlink-vrf).
 
 ## Monitor Execution
 
